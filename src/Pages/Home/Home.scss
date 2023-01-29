@@ -1,0 +1,38 @@
+:root {
+  --NavbarBakcground: #2e424d; /*Also for tab switcher */
+  --BackgroundColor: #46a094;
+  --CardImgBackground: #b0cbfb;
+  --CardBody: rgba(46, 66, 77, 0.75);
+  --CallAmbulance: #994547;
+  --TabActive: #38b7ff;
+  --TabInactive: #67686d;
+  --GreenColor: #6bbd99;
+}
+
+.outer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+.left-container {
+    grid-column: 1 / 2;
+    margin: 5em 3em;
+
+    h1{
+     padding-bottom: .7em;   
+    }
+    p{
+        font-size: large;
+        line-height: 1.5;
+        margin-bottom: 1.5em;
+    }
+}
+.right-container {
+    grid-column: 2 / 3;
+}
+
+.info{
+    position: absolute;
+    bottom: 1.5em;
+    left: 1.5em;
+}

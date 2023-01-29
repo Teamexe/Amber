@@ -1,0 +1,23 @@
+.navbar{
+    background-color: var(--NavbarBakcground);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo{
+        height: 3.25em;
+        padding: 0 1em;
+    }
+}
+
+.profile{
+    margin: 0 1em;
+}
