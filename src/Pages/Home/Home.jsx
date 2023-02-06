@@ -7,7 +7,7 @@ import RedButton from "../../Components/atoms/RedButton/RedButton";
 const Home = () => {
   return (
     <div className="home-container">
-      <Navbar />
+      {/* navbar */}
 
       <div className="outer-container">
           <div className="left-container">

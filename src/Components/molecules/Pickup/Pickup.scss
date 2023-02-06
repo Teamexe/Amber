@@ -1,0 +1,19 @@
+.pickup-location{
+    margin: 0 auto;
+    position: relative;
+
+    .search-icon{
+        position: absolute;
+        color: black;
+        z-index: 2;
+        top: 1.25em;
+        left: 1.5em;
+
+    }
+    input{
+        padding: .7em 4.5em;
+        position: absolute;
+        margin: 1em;
+        border-radius: .5em;
+    }
+}

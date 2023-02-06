@@ -1,0 +1,28 @@
+.confirmation-container{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+
+    .left{
+        width: 50%;
+    }
+    .right{
+        width: 50%;
+
+        .car-details{
+            margin-bottom: .5em;
+        }
+        .pickup{
+            margin-bottom: .5em;
+
+            span{
+                font-size: large;
+                font-weight: 300;
+                margin-left: .5em;
+            }
+        }
+    }
+}
