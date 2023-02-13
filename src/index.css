@@ -9,6 +9,16 @@
   --White: #FFFFFF;
 }
 
+/* white theme */
+/* :root{
+  --DarkBackground-color: #dbdfe1;
+  --Background-color: #88afc4;
+  --GreenBtn-color: #6BBD99;
+  --DarkGreen: #46A094;
+  --RedBtn-color: #994547;
+  --White: #000000;
+} */
+
 *{
   margin: 0;
   padding: 0;

@@ -4,7 +4,7 @@ const GreenButton = (props)=>{
 
     return(
         <div className="button-container">
-            <button className='signup-btn' onClick={props.onClick}>
+            <button className={`signup-btn ${props.className}`} onClick={props.onClick}>
                 {props.children}
             </button>
         </div>
