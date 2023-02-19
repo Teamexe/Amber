@@ -11,7 +11,7 @@ const Confirmation = () => {
         <React.Fragment>
             <div className="confirmation-container">
                 <div className="left">
-                    {/* illustration:car */}
+                    {/* <img src="images/car1.png" alt="" /> */}
                 </div>
                 <div className="right">
                     <h2 className='car-details'>Car Details</h2>

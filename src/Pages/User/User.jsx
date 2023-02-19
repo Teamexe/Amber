@@ -4,11 +4,15 @@ import "./User.scss";
 const User = () => {
   const [signIn, toggle] = useState(true);
 
+  const clickHandler = () => {
+    toggle(!signIn);
+  }
+
   return (
     <div className="user-container">
-      <div className="user-inner-container">
+      <div className={`user-inner-container ${signIn ? "" : "deactive"}`}>
         
-          <div className="signup-container" style={signIn !== true ? `transform: translateX(100%); opacity: 1; z-index: 5;` : null}>
+          <div className="signup-container">
             <form>
               <h1 className="title">Create Account</h1>
               <input type="text" name="name" placeholder="Name" />
@@ -18,7 +22,7 @@ const User = () => {
             </form>
           </div>
 
-          <div className="signin-container" style={signIn !== true ? `transform: translateX(100%);` : null}>
+          <div className="signin-container">
             <form>
               <h1 className="title">Sign in</h1>
               <input type="text" name="email" placeholder="Email" />
@@ -28,17 +32,17 @@ const User = () => {
             </form>
            </div>
 
-            <div className="overlay-container" style={signIn !== true ? `transform: translateX(-100%);` : null}>
-                <div className="overlay" style={signIn !== true ? `transform: translateX(50%);` : null}>
-                    <div className="left-overlay panel" style={signIn !== true ? `transform: translateX(0);` : null}>
+            <div className="overlay-container">
+                <div className="overlay">
+                    <div className="left-overlay panel">
                         <h1>Welcome Back!</h1>
                         <p>To keep connected with us please login with your personal info</p>
-                        <button className="ghost-btn" onClick={() => toggle(true)}>Sign In</button>
+                        <button className="ghost-btn" onClick={clickHandler}>Sign In</button>
                     </div>
-                    <div className="right-overlay panel" style={signIn !== true ? `transform: translateX(20%);` : null}>
+                    <div className="right-overlay panel">
                         <h1>Hello, Friend!</h1>
                         <p>Enter Your personal details and start journey with us</p>
-                        <button className="ghost-btn" onClick={() => toggle(false)}>Sign Up</button>
+                        <button className="ghost-btn" onClick={clickHandler}>Sign Up</button>
                     </div>
                 </div>
             </div>
