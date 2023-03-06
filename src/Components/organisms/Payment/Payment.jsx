@@ -16,7 +16,7 @@ const Payment = () => {
 
       <div className="payment-details">
         <h3>$24</h3>
-        <GreenButton>Confirm</GreenButton>
+        <GreenButton className="payment-confirmation-btn">Confirm</GreenButton>
       </div>
     </div>
   );

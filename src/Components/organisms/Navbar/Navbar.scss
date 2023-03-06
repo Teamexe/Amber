@@ -1,5 +1,6 @@
 .navbar{
     background-color: var(--NavbarBakcground);
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,5 +20,5 @@
 }
 
 .profile{
-    margin: 0 1em;
+    margin: 0 2em;
 }

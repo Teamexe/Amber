@@ -22,7 +22,7 @@ const Confirmation = () => {
                     </h2>
                 </div>
             </div>
-            <Payment />
+            <Payment/>
         </React.Fragment>
     )
 }

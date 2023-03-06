@@ -15,16 +15,34 @@
         .car-details{
             margin-bottom: .5em;
         }
-        .pickup{
-            margin: .5em 0;
-            color: var(--CallAmbulance);
+    }
+}
+.pickup{
+    margin: .5em 0;
+    color: var(--CallAmbulance);
 
-            span{
-                font-size: large;
-                font-weight: 300;
-                margin-left: .5em;
-                color: white;
-            }
+    span{
+        display: block;
+        font-size: large;
+        font-weight: 400;
+        margin-left: .1em;
+        color: var(--RedBtn-color);
+    }
+}
+
+@media (max-width: 480px) {
+    .pickup{
+        font-size: 1em;
+        span{
+            font-size: small;
+        }
+    }
+    .confirmation-container{
+        scale: 1.3;
+        height: 75vh;
+
+        .right{
+            width: 100%;
         }
     }
 }

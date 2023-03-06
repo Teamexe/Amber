@@ -1,7 +1,13 @@
+.location-outer-container{
+    width: 100vw;
+    position: absolute;
+    top: 2em;
+}
 .location{
     display: flex;
     justify-content: center;
 }
+
 .current-location{
     padding-left: 1rem;
     font-weight: 600;

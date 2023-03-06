@@ -10,13 +10,13 @@ const Selection = () => {
   const nextHandler = () => {
     let boxSize = box.clientWidth;
     box.scrollLeft += boxSize;
-    console.log(boxSize);
+    console.log(`boxSize: ${boxSize}`);
   }
 
   const prevHandler = () => {
     let boxSize = box.clientWidth;
     box.scrollLeft -= boxSize;
-    console.log(boxSize);
+    console.log(`boxSize: ${boxSize}`);
   }
 
   return (

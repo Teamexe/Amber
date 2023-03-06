@@ -1,23 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
 
 :root{
-  --DarkBackground-color: #16272C;
+  --NavbarBakcground: #D9D9D9;
+  --DarkBackground-color: #C6D4CC;
   --Background-color: #2E424D;
-  --GreenBtn-color: #6BBD99;
+  --GreenBtn-color: #2FA561;
   --DarkGreen: #46A094;
-  --RedBtn-color: #994547;
-  --White: #FFFFFF;
+  --RedBtn-color: #D24C54;
+  --White: #000;
 }
-
-/* white theme */
-/* :root{
-  --DarkBackground-color: #dbdfe1;
-  --Background-color: #88afc4;
-  --GreenBtn-color: #6BBD99;
-  --DarkGreen: #46A094;
-  --RedBtn-color: #994547;
-  --White: #000000;
-} */
 
 *{
   margin: 0;
@@ -29,9 +20,7 @@ body{
   background-color: var(--DarkBackground-color);
   color: var(--White);
   font-family: 'Inter', sans-serif;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
 }

@@ -1,0 +1,26 @@
+.toggle-container{
+    cursor: pointer;
+    position: relative;
+    height: 3em;
+    width: 11em;
+    border-radius: 2em;
+    background-color: #36464D;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .active{
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 53%;
+        background-color: #2fa560fb;
+        border-radius: 2em;
+    }
+}
+.toggle-container:hover{
+    .active{
+        translate: 90% 0;
+    }
+}

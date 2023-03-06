@@ -1,15 +1,20 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { useMediaQuery } from "react-responsive";
 import './App.scss'
 
-import {Home, User, Confirmation, Selection} from './Pages';
+import {Home, User, Confirmation, Selection, PhoneNav} from './Pages';
 import Navbar from './Components/organisms/Navbar/Navbar';
 
 function App() {
 
+  const isPhone = useMediaQuery({
+    query: "(max-width: 600px)",
+  });
+
   return (
     <div className="App">
-      <Navbar />
+      {(isPhone ? <PhoneNav /> : <Navbar />)}
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/user' element={<User />}></Route>
