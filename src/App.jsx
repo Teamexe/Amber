@@ -17,6 +17,7 @@ function App() {
       <Routes>
           {token && <Route path="/user" element={<Navigate replace to="/selection" />} />}
           {!token && <Route path="/selection" element={<Navigate replace to="/" />} />}
+          {/* {!token && <Route path="/confirmation" element={<Navigate replace to="/" />} />} */}
           <Route path='/selection' element={<Selection />}></Route>
           <Route path='/' element={<Home />}></Route>
           <Route path='/user' element={<User />}></Route>

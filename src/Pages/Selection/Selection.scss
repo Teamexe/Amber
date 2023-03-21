@@ -41,6 +41,21 @@
 }
 
 
-.confirm_btn{
-    // position: absolute;
+.pickup-location{
+    margin: 1em auto;
+    position: relative;
+
+    .search-icon{
+        position: absolute;
+        color: black;
+        z-index: 2;
+        top: 1.25em;
+        left: 1.5em;
+
+    }
+    input{
+        padding: .7em 4.5em;
+        margin: 1em;
+        border-radius: .5em;
+    }
 }

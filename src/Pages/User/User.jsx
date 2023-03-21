@@ -1,5 +1,4 @@
 import { useState, useContext } from "react";
-import { redirect } from "react-router-dom";
 import AuthContext from "../../context/auth-context";
 
 import { useHttpClient } from '../../hooks/http-hook';
@@ -54,6 +53,7 @@ const User = () => {
             'Content-Type': 'application/json'
           }
         )
+        console.log(responseData);
         const data = await responseData.json();
         console.log(data);
       } catch (err) {
