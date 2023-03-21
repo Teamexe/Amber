@@ -5,7 +5,7 @@ import CurrentLocation from '../../molecules/CurrentLocation/CurrentLocation';
 import SignInToggle from '../../atoms/SignInToggle/SignInToggle';
 
 const Navbar = () => {
-    const [isSignIn, setIsSignIn] = useState(false);
+    const [isSignIn, setIsSignIn] = useState(true);
 
     const ProfileHandler = () => {
 
