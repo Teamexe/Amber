@@ -1,12 +1,14 @@
 import './GreenButton.scss';
 
-const GreenButton = (props)=>{
+const GreenButton = (props) => {
 
-    return(
+    return (
         <div className="button-container">
-            <button className={`signup-btn ${props.className}`} onClick={props.onClick}>
-                {props.children}
-            </button>
+            <a href={props.href}>
+                <button className={`signup-btn ${props.className}`} onClick={props.onClick}>
+                    {props.children}
+                </button>
+            </a>
         </div>
     )
 }
