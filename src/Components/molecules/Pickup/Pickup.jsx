@@ -1,5 +1,7 @@
 import "./Pickup.scss";
 
+import GreenButton from "../../atoms/GreenButton/GreenButton";
+
 const Pickup = () => {
   return (
     <div className="pickup-location">
@@ -18,7 +20,9 @@ const Pickup = () => {
         <circle cx="11" cy="11" r="8"></circle>
         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
       </svg>
-      <input type="text" />
+      <input type="text" placeholder="Select Pickup Location"/>
+
+      <GreenButton className='confirm_btn'>Confirm</GreenButton>
     </div>
   );
 };

@@ -21,4 +21,84 @@
 
 .profile{
     margin: 0 2em;
+    cursor: pointer;
+    z-index: 3;
 }
+
+// styling for menu 
+.menu-container{
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #36464D;
+    display: flex;
+    flex-direction: column;
+    padding: 5.5em;
+    line-height: 1.7;
+  
+    .icon-container{
+      margin-bottom: 3em;
+      .profile-icon{
+        cursor: pointer;
+        position: absolute;
+        top: 1em;
+        left: 1em;
+        color: white;
+        border-radius: 50%;
+        padding: 10px 15px;
+        border: 3px solid rgb(255, 255, 255);
+        scale: .8;
+
+        &:hover > svg{
+            scale: 1.1;
+            color: #00ff6afb;
+        }
+
+      }
+      .cross{
+        cursor: pointer;
+        position: absolute;
+        top: 1.5em;
+        right: 1.5em;
+        color: rgba(255, 255, 255, 0.874);
+
+        &:hover{
+            color: #ff0080;
+        }
+      }
+    }
+    
+    .menu-item{
+      font-size: 1.35em;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+
+      &:hover{
+        border-bottom: 2px solid #00ff6afb;
+      }
+    }
+  
+    .logout{
+      cursor: pointer;
+      position: absolute;
+      bottom: 2em;
+      right: 2em;
+      color: #ff0080;
+      scale: 1.25;
+  
+      span{
+        color: white;
+        font-size: 1.1em;
+        margin: .5em;
+        display: inline-block;
+        translate: 1px -5px;
+
+        &:hover{
+            border-bottom: 2px solid #ff0080;
+        }
+      }
+    }
+  }
