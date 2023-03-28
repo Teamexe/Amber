@@ -4,7 +4,7 @@ import GreenButton from "../../atoms/GreenButton/GreenButton";
 
 const Payment = () => {
 
-  // let height = getElementByClassName("payment-container").offsetHeight;
+  let price = '$24';
 
   return (
     <div className="payment-container">
@@ -15,7 +15,7 @@ const Payment = () => {
       </select>
 
       <div className="payment-details">
-        <h3>$24</h3>
+        <h3>{price}</h3>
         <GreenButton className="payment-confirmation-btn">Confirm</GreenButton>
       </div>
     </div>

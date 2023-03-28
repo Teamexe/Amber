@@ -12,7 +12,7 @@ const data = [
 
 const Selection = () => {
 
-  const [selectedId, setSelectedId] = useState(0git);
+  const [selectedId, setSelectedId] = useState(0);
 
   // let box = document.querySelector('.card-container');
   // const nextHandler = () => {
