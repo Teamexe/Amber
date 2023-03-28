@@ -12,10 +12,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    z-index: 3;
 
     .logo{
-        height: 3.25em;
-        padding: 0 1em;
+      height: 3.25em;
+      padding: 0 1em;
     }
 }
 
