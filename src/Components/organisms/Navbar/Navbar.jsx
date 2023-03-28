@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./Navbar.scss";
 
 import CurrentLocation from "../../molecules/CurrentLocation/CurrentLocation";
@@ -43,10 +42,15 @@ const Navbar = () => {
     )
   };
 
+
+  const handleClick = () => {
+    window.location.assign('/');
+  };
+
   return (
     <nav className="navbar">
       {/* brand */}
-        <div className="brand">
+        <div className="brand" onClick={handleClick}>
           <img src="amber.svg" className="logo" alt="AMBER" />
           <h1>AMBER</h1>
         </div>
