@@ -2,6 +2,7 @@ import React from 'react';
 import './Confirmation.scss';
 
 import Payment from '../../Components/organisms/Payment/Payment';
+import Card from '../../Components/molecules/Card/Card';
 
 const Confirmation = () => {
     // let height = document.querySelector(".payment-container").clientHeight;
@@ -11,7 +12,7 @@ const Confirmation = () => {
         <React.Fragment>
             <div className="confirmation-container">
                 <div className="left">
-                    {/* <img src="images/car1.png" alt="" /> */}
+                    <Card image ='images/car1.png'  name = "Ambulace 1" price = "$35" className="confirmation-card"/>
                 </div>
                 <div className="right">
                     <h2 className='car-details'>Car Details</h2>

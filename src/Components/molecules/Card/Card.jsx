@@ -1,5 +1,4 @@
 import './Card.scss';
-import GreenButton from '../../atoms/GreenButton/GreenButton';
 
 /* required props :
      image 
@@ -12,12 +11,8 @@ import GreenButton from '../../atoms/GreenButton/GreenButton';
 
 const Card = (props) => {
 
-    const CardSelectHandler = () => {
-        
-    };
-
     return(
-        <div className={`card active ${props.className}`} onClick={CardSelectHandler}>
+        <div className={`card ${props.className}`}>
             <img className="ambulance-image" src={props.image} alt="ambulance" />
             <div className="data">
                 <h3 className="car-name">{props.name}</h3>

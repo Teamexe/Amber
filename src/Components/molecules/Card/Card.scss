@@ -1,13 +1,23 @@
+:root{
+    --card-body: #36464D
+}
 .card{
     margin: 1rem .5rem;
-    background-color: var(--CardBody);
+    background-color: var(--card-body);
+    color: white;
     width: 20em;
     height: 17.5em;
     border-radius: 1rem;
     box-shadow: 3px 3px 5px 2px rgba(113, 106, 106, 0.4);
     cursor: pointer;
-}
 
+    // &:hover{
+    //     border: 3px solid #00ff6afb;
+    // }
+}
+.card.active{
+    border: 3px solid #00ff6afb;
+}
 .ambulance-image{
     width: 100%;
     // border-radius: 1rem 1rem 0 0 ;
@@ -20,8 +30,11 @@
 }
 .car-name{
     font-weight: 500;
+    font-size: 1em;
     
 }
 .price{
-    color: rgb(255, 255, 255, 0.5);
+    
+    // color: rgb(255, 255, 255, 0.5);
+    color: #00ff6ab4;
 }

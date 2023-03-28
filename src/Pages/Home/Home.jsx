@@ -31,10 +31,11 @@ const Home = () => {
               patient deserves the best, and we strive to provide that with our
               medical transportation services.
             </p>
-            <GreenButton>Get Started</GreenButton>
+            <GreenButton className="home-confirm-btn">Get Started</GreenButton>
           </div>
           <div className="right-container">
             {/* illustration */}
+            <img src="/images/ambulance.svg" alt="" className="home-illustration"/>
           </div>
       </div>
 
@@ -43,7 +44,7 @@ const Home = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-info"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
       </div>
 
-      <RedButton>EMERGENCY CALL</RedButton>
+      <RedButton className="emergency-btn">EMERGENCY CALL</RedButton>
     </div>
   );
 };

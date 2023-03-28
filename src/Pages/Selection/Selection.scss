@@ -5,6 +5,14 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+
+    h2{
+        margin-top: 1em;
+        margin-bottom: -1.5em;
+        font-size: 2.5em;
+        letter-spacing: .8em;
+        opacity: .2;
+    }
 }
 
 .carousel-container{
@@ -15,10 +23,9 @@
 .card-container{
     position: relative;
     display: flex;
-    left: 0;
-    width: 51.8rem;
-    overflow-x: hidden;
     scroll-behavior: smooth;
+    overflow: auto;
+    white-space: nowrap;
 }
 
 .next-btn, .prev-btn{
@@ -34,9 +41,4 @@
 }
 .next-btn{
     translate: 2em 0;
-}
-
-
-.confirm_btn{
-    // position: absolute;
 }
