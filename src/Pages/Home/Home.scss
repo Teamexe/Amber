@@ -18,6 +18,7 @@
   .left-container {
     grid-column: 1 / 2;
     margin: 5em 3em;
+    translate: 0 2em;
   
     h1 {
       padding-bottom: 0.7em;
@@ -28,9 +29,35 @@
       margin-bottom: 1.5em;
     }
   }
+  .home-confirm-btn{
+    scale: 1.2;
+    translate: 0 2em;
+  }
   .right-container {
     grid-column: 2 / 3;
+
+    &::before{
+      content: " ";
+      height: 250px;
+      width: 250px;
+      // background-color: #00ff6afb;
+      background-color: #f5b12a;
+      z-index: -1;
+      position: absolute;
+      top: 52%;
+      right: 25%;
+      translate: 50% -50%;
+      filter: blur(150px);
+    }
+
+    .home-illustration{
+      scale: 0.7;
+      // position: absolute;
+      // top: -2em;
+      translate: 0 -10%;
+    }
   }
+
   
   .info {
     cursor: pointer;
