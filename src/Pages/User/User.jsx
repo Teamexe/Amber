@@ -53,9 +53,12 @@ const User = () => {
             'Content-Type': 'application/json'
           }
         )
-        console.log(responseData);
-        const data = await responseData.json();
-        console.log(data);
+        if (responseData.token) {
+          auth.login(
+            responseData._id,
+            responseData.token
+          );
+        }
       } catch (err) {
         console.log(err);
       }

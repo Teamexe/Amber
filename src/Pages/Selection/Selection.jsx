@@ -1,6 +1,7 @@
 import "./Selection.scss";
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { Link } from "react-router-dom";
 
 import Card from "../../Components/molecules/Card/Card";
 import GreenButton from "../../Components/atoms/GreenButton/GreenButton";
@@ -17,7 +18,7 @@ import {
 
 const Selection = () => {
   const { sendRequest } = useHttpClient();
-  const [selection, setSelection] = useState("");
+  const [selection, setSelection] = useState(null);
 
   const firstCardHandler = () => {
     setSelection("1")
@@ -127,8 +128,8 @@ const Selection = () => {
             <Card image='images/car3.png' name='Ambulance 3' price='$40' onClick={thirdCardHandler} />
           </div>
         </div>
-
-        <GreenButton className='confirm_btn' type="submit" href="/confirmation">Confirm</GreenButton>
+        <GreenButton className='confirm_btn' type="submit"></GreenButton>
+        <Link to={{pathname: "/confirmation",state: "hehehe"}}>Confirm</Link>
       </form>
     </div>
   );
