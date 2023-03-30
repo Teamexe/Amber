@@ -4,8 +4,10 @@ const Info = () => {
 
     return(
         <div className="info-container">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea numquam molestiae itaque a atque ad error dicta culpa perspiciatis rem?consectetur, adipisicing elit. Ea numquam molestiae itaque a atque ad error dicta culpa perspici</p>
+            <h1>About</h1>
+            <p>
+                Our medical care and ambulance app provides instant access to ambulance services, allowing users to quickly and easily book an ambulance, get instant updates on its location for timely and efficient care.
+            </p>
             <a href="#">... read more </a>
         </div>
     )

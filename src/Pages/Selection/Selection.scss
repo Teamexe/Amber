@@ -103,3 +103,18 @@
         border-radius: .5em;
     }
 }
+
+@media (max-width: 890px) {
+    .carousel-container{
+        margin: 0;
+    }
+    .card-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .confirm_btn{
+        margin: 1.5em 0;
+    }
+
+}

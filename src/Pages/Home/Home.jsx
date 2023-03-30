@@ -25,11 +25,11 @@ const Home = () => {
             <p>
               From the moment the patient books with us, our team of professional
               drivers will take care of everything, from providing door-to-door
-              service, to ensuring a comfortable and safe ride. We are committed to
-              providing a high-quality service that is reliable, punctual and
+              service, to ensuring a comfortable and safe ride. 
+              {/* We are committed to providing a high-quality service that is reliable, punctual and
               exceeds the expectations of our patients. We believe that every
               patient deserves the best, and we strive to provide that with our
-              medical transportation services.
+              medical transportation services. */}
             </p>
             <GreenButton className="home-confirm-btn" href="/user">Get Started</GreenButton>
           </div>

@@ -133,8 +133,8 @@ const Selection = () => {
             )}
           </div>
         </div>
-        <GreenButton className='confirm_btn' href="/confirmation">Confirm</GreenButton>
         </form>
+        <GreenButton className='confirm_btn' href="/confirmation">Confirm</GreenButton>
     </div>
 
   );

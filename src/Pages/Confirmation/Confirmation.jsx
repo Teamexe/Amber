@@ -16,10 +16,12 @@ const Confirmation = (props) => {
                 </div>
                 <div className="right">
                     <h2 className='car-details'>Car Details</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequatur, consectetur sunt veritatis officiis iste quo quasi autem explicabo voluptates.</p>
+                    <p>Compact medical van with ample storage and seating for patients and medical staff. 
+                       This van is equipped with medical-grade oxygen tanks, stretchers, and other emergency equipment.
+                    </p>
                     <h2 className='pickup'>
                         Pickup Location
-                        <span>Lorem ipsum dolor, sit amet consectetur</span>
+                        <span>Vista Apartments, Saket, Delhi</span>
                     </h2>
                 </div>
             </div>
