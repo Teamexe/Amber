@@ -58,7 +58,7 @@ const CurrentLocation = () => {
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
         </span>
-        <p className="current-location">{address}</p>
+        <p className="current-location">current location</p>
       </div>
     </div>
   );
