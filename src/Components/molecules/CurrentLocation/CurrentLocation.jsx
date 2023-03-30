@@ -2,40 +2,41 @@ import { useState, useEffect } from "react";
 import "./CurrentLocation.scss";
 
 import { useGeolocated } from "react-geolocated";
-import Geocode from "react-geocode";
 
 const CurrentLocation = () => {
-  useEffect(() => {
-    
-  },[]);
 
-  const { coords, isGeolocationAvailable, isGeolocationEnabled } =
+  const [address, setAddress] = useState(null);
+
+  let executed = false;
+  const getLatLng = async () => {
+    executed=true;
+    let { coords } = await
       useGeolocated({
         positionOptions: {
           enableHighAccuracy: false,
         },
         userDecisionTimeout: 5000,
       });
-    console.log(coords);
+    if (coords) {
+      let latlng = {
+        lat: coords.latitude,
+        lng: coords.longitude
+      }
+      const geocoder = new google.maps.Geocoder();
 
-    // Geocode.setLanguage("en");
-    // Geocode.setRegion("in");
+      geocoder
+        .geocode({ location: latlng })
+        .then((response) => {
+          console.log(response);
+          setAddress(response.results[0].address_components[1].short_name+ ", " +response.results[0].address_components[2].short_name+", "+response.results[0].address_components[3].short_name);
+        });
+    }
+  }
 
-    // Geocode.enableDebug();
+  if(!executed) {
+    getLatLng();
+  }
 
-    // // Get address from latitude & longitude.
-    // let address;
-    // Geocode.fromLatLng(coords.latitude, coords.longitude).then(
-    //   (response) => {
-    //     address = response.results[0].formatted_address;
-    //     console.log(address);
-    //   },
-    //   (error) => {
-    //     console.error(error);
-    //   }
-    // );
-
-  // const [currentLocation, setCurrentLocation] = useState(address);
 
   return (
     <div className="location-outer-container">
@@ -57,7 +58,7 @@ const CurrentLocation = () => {
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
         </span>
-        <p className="current-location">current location</p>
+        <p className="current-location">{address}</p>
       </div>
     </div>
   );

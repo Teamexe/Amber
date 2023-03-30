@@ -31,7 +31,7 @@ const Home = () => {
               patient deserves the best, and we strive to provide that with our
               medical transportation services.
             </p>
-            <GreenButton className="home-confirm-btn">Get Started</GreenButton>
+            <GreenButton className="home-confirm-btn" href="/user">Get Started</GreenButton>
           </div>
           <div className="right-container">
             {/* illustration */}

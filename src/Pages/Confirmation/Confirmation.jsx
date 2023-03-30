@@ -4,10 +4,10 @@ import './Confirmation.scss';
 import Payment from '../../Components/organisms/Payment/Payment';
 import Card from '../../Components/molecules/Card/Card';
 
-const Confirmation = () => {
+const Confirmation = (props) => {
     // let height = document.querySelector(".payment-container").clientHeight;
     // console.log(height);
-
+    console.log(props.state);
     return(
         <React.Fragment>
             <div className="confirmation-container">
