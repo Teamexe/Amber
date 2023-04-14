@@ -9,7 +9,9 @@
 //   --GreenColor: #2FA561;
 // }
 
+
 .home-container{
+
   .outer-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -48,13 +50,20 @@
       right: 25%;
       translate: 50% -50%;
       filter: blur(150px);
+
+      @media (width<950px) {
+        bottom: 80%;
+        left: 0;
+        filter: blur(200px);
+      }
     }
 
     .home-illustration{
       scale: 0.7;
-      // position: absolute;
-      // top: -2em;
       translate: 0 -10%;
+      @media (width<950px) {
+        display: none;
+      }
     }
   }
 
@@ -79,4 +88,11 @@
   }
 }
 
-
+@media (width<950px) {
+  .home-container{
+    .outer-container{
+     grid-template-columns: 1fr;
+    }
+  }
+  
+}

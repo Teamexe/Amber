@@ -4,8 +4,10 @@ const Info = () => {
 
     return(
         <div className="info-container">
-            <h1>Title</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea numquam molestiae itaque a atque ad error dicta culpa perspiciatis rem?consectetur, adipisicing elit. Ea numquam molestiae itaque a atque ad error dicta culpa perspici</p>
+            <h1>About</h1>
+            <p>
+                Introducing a extensive  healthcare service that offers a range of medical facilities and treatments, including hospitals and clinics, to promote the well-being and health of individuals in our community.
+            </p>
             <a href="#">... read more </a>
         </div>
     )

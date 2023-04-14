@@ -74,7 +74,7 @@ const User = () => {
             <h1 className="title">Create Account</h1>
             <input type="text" name="name" placeholder="Name" />
             <input type="text" name="email" placeholder="Email" />
-            <input type="text" name="password" placeholder="Password" />
+            <input type="password" name="password" placeholder="Password" />
             <input type="submit" value="SignUp" className="submit" />
           </form>
         </div>
@@ -83,7 +83,7 @@ const User = () => {
           <form onSubmit={formSubmitHandler}>
             <h1 className="title">Sign in</h1>
             <input type="text" name="email" placeholder="Email" />
-            <input type="text" name="password" placeholder="Password" />
+            <input type="password" name="password" placeholder="Password" />
             <a href="#">Forgot your password?</a>
             <input type="submit" value="SignIn" className="submit" />
           </form>
