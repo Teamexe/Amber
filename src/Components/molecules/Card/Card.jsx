@@ -4,11 +4,11 @@ const Card = (props) => {
     let data;
 
     if(props.id==1) {
-        data = {image: 'images/car1.png', name: "Ambulace 1", price: "$35"}
+        data = {image: 'images/car1.png', name: "Tata Winger", price: "₹350"}
     }else if(props.id==2) {
-        data = {image: 'images/car2.png', name: "Ambulace 2", price: "$69",}
+        data = {image: 'images/car2.png', name: "Maruti Eeco", price: "₹175",}
     }else if(props.id==3){
-        data = {image: 'images/car3.png', name: "Ambulace 3", price: "$420", }
+        data = {image: 'images/car3.png', name: "Mahindra Scorpio", price: "₹220", }
     }
 
     return(
