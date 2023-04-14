@@ -1,13 +1,19 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import "./Navbar.scss";
 
 import CurrentLocation from "../../molecules/CurrentLocation/CurrentLocation";
 import SignInToggle from "../../atoms/SignInToggle/SignInToggle";
 
+import GreenButton from '../../atoms/GreenButton/GreenButton';
+import { useAuth } from '../../../hooks/auth-hook';
+import AuthContext from '../../../context/auth-context';
+
 const Navbar = () => {
-  const [isSignIn, setIsSignIn] = useState(true);
+  // const [isSignIn, setIsSignIn] = useState(true);
 
   const [isOpen, setIsOpen] = useState(false);
+  const { token } = useAuth();
+  const auth = useContext(AuthContext);
 
   const openHandler = () => {
     setIsOpen(true);
@@ -15,6 +21,11 @@ const Navbar = () => {
 
   const closeHandler = () => {
     setIsOpen(false);
+  };
+
+  const logoutHandler = () => {
+    localStorage.removeItem('userData');
+    window.location.reload();
   };
 
   const Menu = () => {
@@ -36,7 +47,7 @@ const Navbar = () => {
         <p className="logout">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" className="feather feather-power"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path><line x1="12" y1="2" x2="12" y2="12"></line>
           </svg>
-          <span>Log Out</span>
+          <span onClick={logoutHandler}>Log Out</span>
         </p>
       </div>
     )
@@ -50,16 +61,16 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* brand */}
-        <div className="brand" onClick={handleClick}>
-          <img src="amber.svg" className="logo" alt="AMBER" />
-          <h1>AMBER</h1>
-        </div>
+      <div className="brand" onClick={handleClick}>
+        <img src="amber.svg" className="logo" alt="AMBER" />
+        <h1>AMBER</h1>
+      </div>
 
       {/* location */}
       <CurrentLocation />
 
       {/* profile */}
-      {!isSignIn ? (
+      {!token ? (
         <SignInToggle />
       ) : (
         <span className="profile" onClick={openHandler}>

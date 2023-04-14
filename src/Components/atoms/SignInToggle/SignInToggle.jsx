@@ -1,12 +1,13 @@
+import GreenButton from '../GreenButton/GreenButton';
 import './SignInToggle.scss';
 
 const SignInToggle = () => {
+    const signInHandler = () => {
+        window.location.assign("/user");    
+    }
 
     return (
-        <div className="toggle-container">
-            <span className='signin'>Signin</span>
-            <span className='active'></span>
-        </div>
+            <GreenButton href="/user">SignIn</GreenButton>
     )
 }
 
