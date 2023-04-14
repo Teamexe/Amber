@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import AuthContext from './context/auth-context';
 import { useAuth } from './hooks/auth-hook';
 
-import {Home, User, Confirmation, Selection, PhoneNav} from './Pages';
+import { Home, User, Confirmation, Selection, PhoneNav } from './Pages';
 import Navbar from './Components/organisms/Navbar/Navbar';
 
 function App() {
@@ -19,15 +19,15 @@ function App() {
     <div className="App">
       {(isPhone ? <PhoneNav /> : <Navbar />)}
       <AuthContext.Provider value={{ token: token, userId: userId, login: login, logout: logout }}>
-      <Routes>
-          {token && <Route path="/user" element={<Navigate replace to="/selection" />} />}
-          {!token && <Route path="/selection" element={<Navigate replace to="/" />} />}
-          {/* {!token && <Route path="/confirmation" element={<Navigate replace to="/" />} />} */}
-          <Route path='/selection' element={<Selection />}></Route>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/user' element={<User />}></Route>
-          <Route path='/confirmation' element={<Confirmation />}></Route>
-        </Routes>
+          <Routes>
+            {token && <Route path="/user" element={<Navigate replace to="/selection" />} />}
+            {!token && <Route path="/selection" element={<Navigate replace to="/" />} />}
+            {/* {!token && <Route path="/confirmation" element={<Navigate replace to="/" />} />} */}
+            <Route path='/selection' element={<Selection />}></Route>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/user' element={<User />}></Route>
+            <Route path='/confirmation' element={<Confirmation />}></Route>
+          </Routes>
       </AuthContext.Provider>
     </div>
   )

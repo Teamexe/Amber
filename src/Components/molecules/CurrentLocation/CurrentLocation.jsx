@@ -27,7 +27,6 @@ const CurrentLocation = () => {
       geocoder
         .geocode({ location: latlng })
         .then((response) => {
-          console.log(response);
           setAddress(response.results[0].address_components[1].short_name+ ", " +response.results[0].address_components[2].short_name+", "+response.results[0].address_components[3].short_name);
         });
     }
@@ -36,8 +35,7 @@ const CurrentLocation = () => {
   if(!executed) {
     getLatLng();
   }
-
-
+  
   return (
     <div className="location-outer-container">
       <div className="location">

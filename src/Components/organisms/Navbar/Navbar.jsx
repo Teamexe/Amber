@@ -12,8 +12,8 @@ const Navbar = () => {
   // const [isSignIn, setIsSignIn] = useState(true);
 
   const [isOpen, setIsOpen] = useState(false);
-    const { token } = useAuth();
-    const auth = useContext(AuthContext);
+  const { token } = useAuth();
+  const auth = useContext(AuthContext);
 
   const openHandler = () => {
     setIsOpen(true);
@@ -23,10 +23,10 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-    const logoutHandler = () => {
-        localStorage.removeItem('userData');
-        window.location.reload();
-    };
+  const logoutHandler = () => {
+    localStorage.removeItem('userData');
+    window.location.reload();
+  };
 
   const Menu = () => {
     return (
@@ -61,10 +61,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* brand */}
-        <div className="brand" onClick={handleClick}>
-          <img src="amber.svg" className="logo" alt="AMBER" />
-          <h1>AMBER</h1>
-        </div>
+      <div className="brand" onClick={handleClick}>
+        <img src="amber.svg" className="logo" alt="AMBER" />
+        <h1>AMBER</h1>
+      </div>
 
       {/* location */}
       <CurrentLocation />
