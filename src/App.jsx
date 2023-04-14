@@ -11,8 +11,8 @@ import { Home, User, Confirmation, Selection, PhoneNav } from './Pages';
 import Navbar from './Components/organisms/Navbar/Navbar';
     
 function App() {
-  // const apiKey={process.env.REACT_APP_MAPS_API_KEY};
-  const scriptUrl = `https://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_MAPS_API_KEY}&libraries=places`
+  const apiKey="AIzaSyBhdMIb5yVHLJ4A78Ncao9JC_dHJC0zeB8";
+  const scriptUrl = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`
   useScript(scriptUrl);
 
   const isPhone = useMediaQuery({
@@ -28,7 +28,7 @@ function App() {
           <Routes>
             {token && <Route path="/user" element={<Navigate replace to="/selection" />} />}
             {!token && <Route path="/selection" element={<Navigate replace to="/" />} />}
-            {/* {!token && <Route path="/confirmation" element={<Navigate replace to="/" />} />} */}
+            {!token && <Route path="/confirmation" element={<Navigate replace to="/" />} />}
             <Route path='/selection' element={<Selection />}></Route>
             <Route path='/' element={<Home />}></Route>
             <Route path='/user' element={<User />}></Route>
