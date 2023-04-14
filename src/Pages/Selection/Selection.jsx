@@ -69,6 +69,8 @@ const Selection = () => {
     { id: 3, image: 'images/car3.png', name: "Ambulace 3", price: "$420", },
   ];
   
+  let confirmedDetails;
+
   const selectionHandler = async (e) => {
     e.preventDefault();
     if (selection === "") {
@@ -91,22 +93,23 @@ const Selection = () => {
         'Content-Type': 'application/json'
       }
       )
-      console.log(responseData);
+      confirmedDetails = {
+        distance: responseData.distance,
+        duration: responseData.duration
+      }
     } catch (err) {
       console.log(err);
     }
-  }
-  
-  const [selectedId, setSelectedId] = useState(null);
-
-  const toConfirmation = () => {
     if(selectedId && latitude) {
-      navigate('/confirmation', { state: { id: selectedId, address: pickupAddress} });
+      navigate('/confirmation', { state: { id: selectedId, address: pickupAddress, details: confirmedDetails} });
     }
     else {
       console.log("choose a car");
     }
   }
+  
+  const [selectedId, setSelectedId] = useState(null);
+
   
   return (
     <div className="selection-container">
@@ -138,8 +141,8 @@ const Selection = () => {
             )}
           </div>
         </div>
-        <GreenButton className='confirm_btn' href="/confirmation" onClick={() => { toConfirmation()}}>
-          Confirm
+        <GreenButton type="submit" className='confirm_btn'>
+              Confirm
         </GreenButton>
       </form>
     </div>
