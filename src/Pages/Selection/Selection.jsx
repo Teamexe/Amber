@@ -134,7 +134,7 @@ const Selection = () => {
         <div className="carousel-container">
           <div className="card-container">
             {data.map(card =>
-              <Card key={card.id} onClick={() => setSelectedId(card.id)} image={card.image} name={card.name} price={card.price} pickupAddress={pickupAddress} className={selectedId == card.id ? 'active' : null} />
+              <Card key={card.id} id={card.id} onClick={() => setSelectedId(card.id)} pickupAddress={pickupAddress} className={selectedId == card.id ? 'active' : null} />
             )}
           </div>
         </div>

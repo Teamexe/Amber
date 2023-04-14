@@ -19,7 +19,7 @@ const Confirmation = (props) => {
         <React.Fragment>
             <div className="confirmation-container">
                 <div className="left">
-                    <Card image ={confirmationImage}  name = "Ambulance" price = "$35" className="confirmation-card"/>
+                    <Card id={location.state.id} className="confirmation-card"/>
                 </div>
                 <div className="right">
                     <h2 className='car-details'>Car Details</h2>
