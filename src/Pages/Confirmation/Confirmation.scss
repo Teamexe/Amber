@@ -53,6 +53,11 @@
         color: rgba(210, 5, 70, 0.93);
     }
 }
+
+.confirm-details {
+    color: rgba(238, 14, 59, 0.93);
+}
+
 @media (max-width: 650px) {
     .confirmation-container{
         flex-direction: column;

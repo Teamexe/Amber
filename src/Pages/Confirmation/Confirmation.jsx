@@ -26,12 +26,8 @@ const Confirmation = (props) => {
                     <Card id={location.state.id} className="confirmation-card"/>
                 </div>
                 <div className="right">
-                    {/* <h2 className='car-details'>Car Details</h2>
-                    <p>
-                        {description}
-                    </p> */}
-                    <h2>Arriving In</h2>
-                    <p>time</p>
+                    <h2 className='car-details'>Car Details</h2>
+                    <p>The ambulance is approximately <span className='confirm-details'>{location.state.details.distance}</span> away and estimated to arrive in <span className='confirm-details'>{location.state.details.duration}</span>. Please remain calm and clear the way for emergency vehicles.</p>
                     <h2 className='pickup'>
                         Pickup Location
                         <span>{location.state.address}</span>
