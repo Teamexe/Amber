@@ -34,8 +34,8 @@ const Confirmation = (props) => {
                     </h2>
                 </div>
             </div>
-            <GreenButton>Confirm</GreenButton>
-            {/* <Payment/> */}
+            {/* <GreenButton>Confirm</GreenButton> */}
+            <Payment/>
         </React.Fragment>
     )
 }

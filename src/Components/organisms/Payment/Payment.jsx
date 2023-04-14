@@ -8,11 +8,12 @@ const Payment = () => {
 
   return (
     <div className="payment-container">
-      <select>
+      {/* <select>
         <option value="actual value 1">Google Pay</option>
         <option value="actual value 2">Cash</option>
         <option value="actual value 3">Paytm</option>
-      </select>
+      </select> */}
+      <h3>Thanks!!!</h3>
 
       <div className="payment-details">
         {/* <h3>{price}</h3> */}
