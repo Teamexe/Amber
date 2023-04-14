@@ -1,10 +1,10 @@
 import "./Selection.scss";
 
 import React, { useState, useContext } from "react";
-import { Link } from "react-router-dom";
 import Card from "../../Components/molecules/Card/Card";
 import GreenButton from "../../Components/atoms/GreenButton/GreenButton";
 
+import { useNavigate } from "react-router-dom";
 
 import { useHttpClient } from "../../hooks/http-hook";
 
@@ -19,6 +19,9 @@ import {
 } from "@reach/combobox"
 
 const Selection = () => {
+
+  const navigate = useNavigate();
+
   const { sendRequest } = useHttpClient();
   const [selection, setSelection] = useState(null);
   const [pickupAddress, setPickupAddress] = useState();
@@ -36,26 +39,25 @@ const Selection = () => {
       suggestions: { status, data },
       clearSuggestions
     } = usePlacesAutocomplete();
-
+    
     const handleSelect = async (address) => {
       setValue(address, false);
       clearSuggestions();
-      // console.log(address);
       setPickupAddress(address);
       const results = await getGeocode({ address });
       const { lat, lng } = await getLatLng(results[0]);
       latitude = lat;
       longitude = lng;
     }
-    
+
     return (
-      <Combobox onSelect={handleSelect}>
+      <Combobox  onSelect={handleSelect}>
         <ComboboxInput value={value} onChange={(e) => setValue(e.target.value)} disabled={!ready} />
         <ComboboxPopover>
-          <ComboboxList>
+          <ComboboxList className="combobox-list">
             {status === "OK" && data.map(({ place_id, description }) =>
               <ComboboxOption key={place_id} value={description} />
-              )}
+            )}
           </ComboboxList>
         </ComboboxPopover>
       </Combobox>
@@ -95,15 +97,19 @@ const Selection = () => {
     }
   }
   
-  const [selectedId, setSelectedId] = useState("0");
+  const [selectedId, setSelectedId] = useState(null);
 
-  // const placeConfirmHandler =()=>{
-  //   console.log(pickupPlace);
-  // }
-
+  const toConfirmation = () => {
+    if(selectedId && latitude) {
+      navigate('/confirmation', { state: { id: selectedId, address: pickupAddress} });
+    }
+    else {
+      console.log("choose a car");
+    }
+  }
+  
   return (
     <div className="selection-container">
-      {/* pickup location  */}
       <form className="selection-form" onSubmit={selectionHandler}>
 
         <div className="pickup-location">
@@ -125,7 +131,6 @@ const Selection = () => {
           <GoogleAutocomplete />
         </div>
 
-        {/* carousel */}
         <div className="carousel-container">
           <div className="card-container">
             {data.map(card =>
@@ -133,10 +138,11 @@ const Selection = () => {
             )}
           </div>
         </div>
-        </form>
-        <GreenButton className='confirm_btn' href="/confirmation">Confirm</GreenButton>
+        <GreenButton className='confirm_btn' href="/confirmation" onClick={() => { toConfirmation()}}>
+          Confirm
+        </GreenButton>
+      </form>
     </div>
-
   );
 };
 

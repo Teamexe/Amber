@@ -1,18 +1,6 @@
 import './Card.scss';
 
-/* required props :
-     image 
-     name
-     price
-     driverName
-     numberPlate
-     arrivalTime
-*/
 const Card = (props) => {
-
-    console.log(`pickup address: ${props.pickupAddress} `);
-
-
     return(
         <div className={`card ${props.className}`} onClick={props.onClick}>
             <img className="ambulance-image" src={props.image} alt="ambulance" />
