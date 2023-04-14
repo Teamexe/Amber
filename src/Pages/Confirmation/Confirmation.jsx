@@ -15,6 +15,7 @@ const Confirmation = (props) => {
     } else {
         confirmationImage = "images/car3.png"
     }
+    console.log(location.state);
     return(
         <React.Fragment>
             <div className="confirmation-container">
@@ -23,7 +24,7 @@ const Confirmation = (props) => {
                 </div>
                 <div className="right">
                     <h2 className='car-details'>Car Details</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequatur, consectetur sunt veritatis officiis iste quo quasi autem explicabo voluptates.</p>
+                    <p>The ambulance is approximately <span className='confirm-details'>{location.state.details.distance}</span> away and estimated to arrive in <span className='confirm-details'>{location.state.details.duration}</span>. Please remain calm and clear the way for emergency vehicles.</p>
                     <h2 className='pickup'>
                         Pickup Location
                         <span>{location.state.address}</span>
