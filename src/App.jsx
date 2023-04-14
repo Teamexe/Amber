@@ -1,11 +1,10 @@
 import { Route, Routes, Navigate } from 'react-router-dom'
 import { useMediaQuery } from "react-responsive";
-// import './App.scss';
 
 import AuthContext from './context/auth-context';
 import { useAuth } from './hooks/auth-hook';
 
-import { Home, User, Confirmation, Selection, PhoneNav } from './Pages';
+import { Home, User, About, Confirmation, Selection, PhoneNav, PhoneUser } from './Pages';
 import Navbar from './Components/organisms/Navbar/Navbar';
 
 function App() {
@@ -25,7 +24,8 @@ function App() {
             {/* {!token && <Route path="/confirmation" element={<Navigate replace to="/" />} />} */}
             <Route path='/selection' element={<Selection />}></Route>
             <Route path='/' element={<Home />}></Route>
-            <Route path='/user' element={<User />}></Route>
+            <Route path='/about' element={<About />}></Route>
+            <Route path='/user' element={(isPhone ? <PhoneUser /> : <User />)}></Route>
             <Route path='/confirmation' element={<Confirmation />}></Route>
           </Routes>
       </AuthContext.Provider>

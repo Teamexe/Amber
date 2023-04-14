@@ -9,12 +9,22 @@
     display: flex;
     justify-content: center;
     width: 60%;
+    @media (width<820px) {
+        width: 40%;
+    }
 }
 
 .current-location{
     padding-left: 1rem;
     font-weight: 600;
     font-size: 1.2rem;
+    @media (width<820px) {
+        font-size: 0.8em;
+    }
+    @media (width<390px) {
+        font-size: 0.7em;
+    }
+    
 }
 
 @media (max-width: 456px) {

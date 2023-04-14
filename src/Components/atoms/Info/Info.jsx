@@ -6,7 +6,7 @@ const Info = () => {
         <div className="info-container">
             <h1>Title</h1>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea numquam molestiae itaque a atque ad error dicta culpa perspiciatis rem?consectetur, adipisicing elit. Ea numquam molestiae itaque a atque ad error dicta culpa perspici</p>
-            <a href="#">... read more </a>
+            <a href="/about">... read more </a>
         </div>
     )
 }
