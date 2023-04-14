@@ -26,7 +26,6 @@ const Selection = () => {
   const [selection, setSelection] = useState(null);
   const [pickupAddress, setPickupAddress] = useState();
 
-  
   let details;
   
   let latitude, longitude;
