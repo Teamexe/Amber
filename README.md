@@ -1,4 +1,4 @@
-![Amber-logo](Amber/public/amber.svg)
+![Amber-logo](amber-frontend/public/amber.svg)
 
 # Amber
 
@@ -96,26 +96,26 @@ ventilator support)
 
 <h2><b>1.Home Page</b><br></h2>
 After opening the application the first page that is encountered is a Home page which will tell our users about what we do and provide a quick insight.
- <img src="Amber/public/images/readme%20images/Home.png">
+ <img src="amber-frontend/public/images/readme%20images/Home.png">
  
  <br>
 <h2><b>2.User SingIn/SignUp:</b></br></h2> Users would SignUp on the platform by providing basic information such as name, email, and password.
 
-<img src = "Amber/public/images/readme images/SignIn.png">
+<img src = "amber-frontend/public/images/readme images/SignIn.png">
 
 <br>
 
  <h2><b>3.Get started</b><br></h2>
  After clicking on get started you will be taken to another page where you will select the location using the search bar and then will select the category of ambulance that you want and hit confirm button.
 <br>
- <img src="Amber/public/images/readme%20images/Category.png">
+ <img src="amber-frontend/public/images/readme images/Category.png">
 
 <br>
 
  <h2><b>4. Booking details</b><br></h2>
 
 <br>
- <img src="Amber/public/images/readme%20images/Booking.png">
+ <img src="amber-frontend/public/images/readme%20images/Booking.png">
 
 
 ## Contributing
