@@ -1,0 +1,15 @@
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.emergency-btn {
+  cursor: pointer;
+  border: none;
+  background-color: var(--RedBtn-color);
+  color: white;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 0.4rem;
+  font-size: 1.05rem;
+}

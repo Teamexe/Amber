@@ -29,10 +29,6 @@ Another significant advantage of our app is the increased efficiency it provides
 
 <h4> The Video Demonstration for app in use can be seen <a href="https://www.youtube.com/watch?v=xgiuiCHF4D8">here</a></h4>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 0245e34e89af3c7a5ad40b75c2b475163218a1f9
 <h2>Installation :</h2>
 To run Amber on your own machine, follow these steps:
 <ul>

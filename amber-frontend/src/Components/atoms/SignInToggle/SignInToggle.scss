@@ -1,0 +1,17 @@
+.toggle-container{
+    cursor: pointer;
+    position: relative;
+    height: 3em;
+    width: 6em;
+    border-radius: 2em;
+    background-color: #36464D;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover{
+        background-color: #2fa560fb;
+    }
+}
+
